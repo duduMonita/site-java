@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>                
+            <h1><h:outputText value="Lista Pessoa"/></h1>
+            <input type="hidden" value="#{pessoaManagedBean.recuperar()}"/>
+            <h:form>
+                <h:dataTable id="tbPessoa" value="#{pessoaManagedBean.pessoas}" var="pessoas">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="IdPessoa"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.idPessoa}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Nome"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.nome}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Cpf"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.cpf}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Rg"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.rg}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="NomeMae"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.nomeMae}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Endereco"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.endereco}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Numero"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.numero}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Cep"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.cep}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Complemento"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.complemento}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Cidade"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.cidade}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Bairro"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.bairro}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="DtNascimento"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.dtNascimento}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Sexo"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.sexo}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Naturalidade"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.naturalidade}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Telefone"/>
+                        </f:facet>
+                        <h:outputText value="#{pessoas.telefone}"/>
+                    </h:column>
+                </h:dataTable>        
+                <h:commandLink id="recepcao" value="Voltar" action="#{pessoaManagedBean.montarPaginaVoltar()}"/>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+

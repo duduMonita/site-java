@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h1><h:outputText value="Lista Usuários"/></h1>
+            <input type="hidden" value="#{usuarioManagedBean.recuperar()}"/>
+            <h:form>
+                <h:dataTable value="#{usuarioManagedBean.usuarios}" var="usuario">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="IdUsuario"/>
+                            </f:facet>
+                            <h:outputText value="#{usuario.idUsuario}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Login"/>
+                            </f:facet>
+                            <h:outputText value="#{usuario.login}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Senha"/>
+                            </f:facet>
+                            <h:outputText value="#{usuario.senha}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="IdPessoa"/>
+                            </f:facet>
+                            <h:outputText value="#{usuario.idPessoa.idPessoa}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="IdSetor"/>
+                            </f:facet>
+                            <h:outputText value="#{usuario.idSetor.idSetor}"/>
+                        </h:column>
+                    </h:dataTable>
+                    <h:commandLink id="recepcao" value="Voltar" action="#{usuarioManagedBean.montarPaginaVoltar()}"/>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+

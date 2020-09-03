@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h1><h:outputText value="Cadastro de Paciente"/></h1>
+                    <h:panelGrid columns="2">
+                        <h:outputLabel value="IdPaciente:" for="idPaciente" />
+                        <h:inputText id="idPaciente" value="#{pacienteManagedBean.paciente.idPaciente}" title="IdPaciente" required="true" requiredMessage="The IdPaciente field is required."/>
+                        <h:outputLabel value="TelEmergencia:" for="telEmergencia" />
+                        <h:inputText id="telEmergencia" value="#{pacienteManagedBean.paciente.telEmergencia}" title="TelEmergencia" />
+                    </h:panelGrid>
+                <h:commandButton value="Salvar" action="#{pacienteManagedBean.salvar()}"/>
+                <h:commandLink id="recepcao" value="Voltar" action="#{pacienteManagedBean.montarPaginaVoltar()}"/>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

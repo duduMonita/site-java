@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>ENFERMAGEM</h1><br></br>
+                
+            <h4>Pessoa</h4>
+                <h:commandLink id="listarPPessoa"    action="#{pessoaManagedBean.montarPaginaListar()}">LISTAR PESSOA</h:commandLink><br></br>
+                
+            <h4>Paciente</h4>
+                <h:commandLink id="inserirPPaciente" action="#{pacienteManagedBean.montarPaginaSalvar()}">INSERIR/ALTERAR PACIENTE</h:commandLink><br></br>                
+                <h:commandLink id="listarPPaciente"  action="#{pacienteManagedBean.montarPaginaListar()}">LISTAR PACIENTE</h:commandLink><br></br>
+        
+            <h4>Alergia</h4>
+                <h:commandLink id="inserirPAlergia"  action="#{alergiaManagedBean.montarPaginaSalvar()}">INSERIR/ALTERAR ALERGIA</h:commandLink><br></br>
+                <h:commandLink id="listarPAlergia"   action="#{alergiaManagedBean.montarPaginaListar()}">LISTAR ALERGIA</h:commandLink><br></br>
+                
+            <h4>Paciente/Alergia</h4>
+                <h:commandLink id="inserirPPacAlerg" action="#{pacienteAlergiaManagedBean.montarPaginaSalvar()}">INSERIR/ALTERAR PACIENTE/ALERGIA</h:commandLink><br></br>
+                <h:commandLink id="listarPPacAlerg"  action="#{pacienteAlergiaManagedBean.montarPaginaListar()}">LISTAR PACIENTE/ALERGIA</h:commandLink>
+        </h:form>
+    </h:body>
+</html>
+

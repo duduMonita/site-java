@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h1><h:outputText value="Inserir Pessoa"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="IdPessoa:" for="idPessoa" />
+                    <h:inputText id="idPessoa" value="#{pessoaManagedBean.pessoa.idPessoa}" title="IdPessoa" required="true" requiredMessage="The IdPessoa field is required."/>
+                    <h:outputLabel value="Nome:" for="nome" />
+                    <h:inputText id="nome" value="#{pessoaManagedBean.pessoa.nome}" title="Nome" required="true" requiredMessage="The Nome field is required."/>
+                    <h:outputLabel value="Cpf:" for="cpf" />
+                    <h:inputText id="cpf" value="#{pessoaManagedBean.pessoa.cpf}" title="Cpf" required="true" requiredMessage="The Cpf field is required."/>
+                    <h:outputLabel value="Rg:" for="rg" />
+                    <h:inputText id="rg" value="#{pessoaManagedBean.pessoa.rg}" title="Rg" required="true" requiredMessage="The Rg field is required."/>
+                    <h:outputLabel value="NomeMae:" for="nomeMae" />
+                    <h:inputText id="nomeMae" value="#{pessoaManagedBean.pessoa.nomeMae}" title="NomeMae" required="true" requiredMessage="The NomeMae field is required."/>
+                    <h:outputLabel value="Endereco:" for="endereco" />
+                    <h:inputText id="endereco" value="#{pessoaManagedBean.pessoa.endereco}" title="Endereco" required="true" requiredMessage="The Endereco field is required."/>
+                    <h:outputLabel value="Numero:" for="numero" />
+                    <h:inputText id="numero" value="#{pessoaManagedBean.pessoa.numero}" title="Numero" />
+                    <h:outputLabel value="Cep:" for="cep" />
+                    <h:inputText id="cep" value="#{pessoaManagedBean.pessoa.cep}" title="Cep" />
+                    <h:outputLabel value="Complemento:" for="complemento" />
+                    <h:inputText id="complemento" value="#{pessoaManagedBean.pessoa.complemento}" title="Complemento" />
+                    <h:outputLabel value="Cidade:" for="cidade" />
+                    <h:inputText id="cidade" value="#{pessoaManagedBean.pessoa.cidade}" title="Cidade" required="true" requiredMessage="The Cidade field is required."/>
+                    <h:outputLabel value="Bairro:" for="bairro" />
+                    <h:inputText id="bairro" value="#{pessoaManagedBean.pessoa.bairro}" title="Bairro" />
+                    <h:outputLabel value="DtNascimento:" for="dtNascimento" />
+                    <h:inputText id="dtNascimento" value="#{pessoaManagedBean.pessoa.dtNascimento}" title="DtNascimento" required="true" requiredMessage="The DtNascimento field is required.">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="Sexo:" for="sexo" />
+                    <h:inputText id="sexo" value="#{pessoaManagedBean.pessoa.sexo}" title="Sexo" required="true" requiredMessage="The Sexo field is required."/>
+                    <h:outputLabel value="Naturalidade:" for="naturalidade" />
+                    <h:inputText id="naturalidade" value="#{pessoaManagedBean.pessoa.naturalidade}" title="Naturalidade" required="true" requiredMessage="The Naturalidade field is required."/>
+                    <h:outputLabel value="Telefone:" for="telefone" />
+                    <h:inputText id="telefone" value="#{pessoaManagedBean.pessoa.telefone}" title="Telefone" />
+                </h:panelGrid>
+                <h:commandLink id="voltar" action="#{pessoaManagedBean.montarPaginaVoltar()}">Voltar</h:commandLink>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+

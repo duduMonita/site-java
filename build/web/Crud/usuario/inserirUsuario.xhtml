@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h1><h:outputText value="Cadastro de Usuários"/></h1>
+                    <h:panelGrid columns="2">
+                        <h:outputLabel value="IdUsuario:" for="idUsuario" />
+                        <h:inputText id="idUsuario" value="#{usuarioManagedBean.usuario.idUsuario}" title="IdUsuario" required="true" requiredMessage="The IdUsuario field is required."/>
+                        <h:outputLabel value="Login:" for="login" />
+                        <h:inputText id="login" value="#{usuarioManagedBean.usuario.login}" title="Login" required="true" requiredMessage="The Login field is required."/>
+                        <h:outputLabel value="Senha:" for="senha" />
+                        <h:inputText id="senha" value="#{usuarioManagedBean.usuario.senha}" title="Senha" required="true" requiredMessage="The Senha field is required."/>
+                        <h:outputLabel value="IdPessoa:" for="idPessoa" />
+                        <h:inputText id="idPessoa" value="#{usuarioManagedBean.usuario.idPessoa}" title="IdPessoa" required="true" requiredMessage="The IdPessoa field is required."/>
+                        <h:outputLabel value="IdSetor:" for="idSetor" />
+                        <h:inputText id="idSetor" value="#{usuarioManagedBean.usuario.idSetor}" title="IdSetor" required="true" requiredMessage="The IdSetor field is required."/>
+                    </h:panelGrid>
+                <h:commandButton value="Salvar" action="#{usuarioManagedBean.salvar()}"/>
+                <h:commandLink id="recepcao" value="Voltar" action="#{pessoaManagedBean.montarPaginaVoltar()}"/>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+
